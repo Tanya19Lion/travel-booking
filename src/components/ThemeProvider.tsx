@@ -18,7 +18,7 @@ const ThemeContextProvider = ({
 	storageKey = 'project-react-theme',
 	...props
 }: ThemeContextProviderProps) => {
-	const [theme, setTheme] = useState(() => getItem(storageKey) || defaultTheme);
+	const [theme, setTheme] = useState<Theme>(() => getItem(storageKey) || defaultTheme);
 	const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
 		? 'dark'
 		: 'light';

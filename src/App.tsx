@@ -1,10 +1,11 @@
+import HomePage from "./pages/home-page";
+
 function App() {
 	return (
-		<>
-			<p className="bg-red-600 font-extrabold text-4xl text-white">
-				Hello world!
-			</p>
-		</>
+		<div className="flex flex-col justify-center items-center">
+			<h2>Let`s build something big together!</h2>
+			<HomePage />			
+		</div>
 	)
 }
 
