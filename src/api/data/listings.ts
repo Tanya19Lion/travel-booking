@@ -11,7 +11,7 @@ export const createListing = (listing: Listing): ListingExtended => {
 		id,
 		maxGuests,
 		name,
-		locationId,
+		location,
 		images,
 		price,
 		rating,
@@ -21,7 +21,7 @@ export const createListing = (listing: Listing): ListingExtended => {
 		id,
 		name,
 		description,
-		locationId,
+		location,
 		images,
 		availability,
 		maxGuests,
@@ -66,7 +66,7 @@ export const listings: ListingExtended[] = [
 			The apartment features a large living room with plenty of natural light, a fully equipped kitchen with all the necessary appliances, and a cozy bedroom with a comfortable bed and high-quality linens. The bathroom is modern and clean, with a large shower and plenty of towels provided.
 
 			With its central location, modern amenities, and comfortable furnishings, this apartment is sure to make your stay in London a memorable one. Book now and experience the best that the city has to offer!`,
-		locationId: 1,
+		location: 'London',
 		images: [
 			'listing1-1.jpg',
 			'listing1-2.jpg',
@@ -93,7 +93,7 @@ export const listings: ListingExtended[] = [
 			The studio is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The studio is equipped with a TV, a DVD player, and a washing machine.
 
 			Another thing to note is that the studio is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.`,
-		locationId: 2,
+		location: 'Paris',
 		images: [
 			'listing2-1.jpg',
 			'listing2-2.jpg',
@@ -122,7 +122,7 @@ export const listings: ListingExtended[] = [
 			One of the bedrooms has a double bed, while the other two have twin beds. The house is equipped with a TV, a DVD player, and a washing machine.
 
 			If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!`,
-		locationId: 1,
+		location: 'London',
 		images: [
 			'listing3-1.jpg',
 			'listing3-2.jpg',
@@ -149,7 +149,7 @@ export const listings: ListingExtended[] = [
 			The loft is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.
 
 			The loft is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The loft is equipped with a TV, a DVD player, and a washing machine.`,
-		locationId: 2,
+		location: 'Paris',
 		images: [
 			'listing4-1.jpg',
 			'listing4-2.jpg',
@@ -176,7 +176,7 @@ export const listings: ListingExtended[] = [
 			The apartment is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.
 
 			If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!`,
-		locationId: 1,
+		location: 'London',
 		images: [
 			'listing5-1.jpg',
 			'listing5-2.jpg',
@@ -203,7 +203,7 @@ export const listings: ListingExtended[] = [
 			One of the many advantages of this cottage is that it is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.
 
 			The cottage is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The cottage is equipped with a TV, a DVD player, and a washing machine.`,
-		locationId: 2,
+		location: 'Paris',
 		images: [
 			'listing6-1.jpg',
 			'listing6-2.jpg',
@@ -232,7 +232,7 @@ export const listings: ListingExtended[] = [
 			Located just a few minutes' walk from the nearest metro station, this villa is perfectly situated for exploring all that London has to offer. Whether you're here for business or pleasure, this villa is the ideal base for your stay in the city.
 
 			With its central location, modern amenities, and comfortable furnishings, this villa is sure to make your stay in London a memorable one. Book now and experience the best that the city has to offer!`,
-		locationId: 1,
+		location: 'London',
 		images: [
 			'listing7-1.jpg',
 			'listing7-2.jpg',
@@ -259,7 +259,7 @@ export const listings: ListingExtended[] = [
 			The houseboat is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.
 
 			The houseboat is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The houseboat is equipped with a TV, a DVD player, and a washing machine.`,
-		locationId: 2,
+		location: 'Paris',
 		images: [
 			'listing8-1.jpg',
 			'listing8-2.jpg',
@@ -288,7 +288,7 @@ export const listings: ListingExtended[] = [
 			One of the bedrooms has a double bed, while the other two have twin beds. The apartment is equipped with a TV, a DVD player, and a washing machine.
 
 			If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!`,
-		locationId: 1,
+		location: 'London',
 		images: [
 			'listing9-1.jpg',
 			'listing9-2.jpg',
@@ -315,7 +315,7 @@ export const listings: ListingExtended[] = [
 			The studio is located in the heart of Paris, just a few minutes' walk from the Louvre Museum and the Pompidou Center. It is also close to many restaurants, cafes, and shops.
 
 			The studio is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The studio is equipped with a TV, a DVD player, and a washing machine.`,
-		locationId: 2,
+		location: 'Paris',
 		images: [
 			'listing10-1.jpg',
 			'listing10-2.jpg',
@@ -342,7 +342,7 @@ export const listings: ListingExtended[] = [
 			The house is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.
 
 			If you need any help during your stay, we will be happy to assist you. We look forward to welcoming you to London!`,
-		locationId: 1,
+		location: 'London',
 		images: [
 			'listing11-1.jpg',
 			'listing11-2.jpg',
@@ -369,7 +369,7 @@ export const listings: ListingExtended[] = [
 			One of the many advantages of this loft is that it is located in a quiet residential area, but it is still close to many restaurants, cafes, and shops. It is also close to the British Museum and the National Gallery.
 
 			The loft is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The loft is equipped with a TV, a DVD player, and a washing machine.`,
-		locationId: 2,
+		location: 'Paris',
 		images: [
 			'listing12-1.jpg',
 			'listing12-2.jpg',

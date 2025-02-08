@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { Search } from "lucide-react";
-import { Button, Input, DatePickerWithRange, Stepper } from "@/components/ui";
+import { Button, Input, DateRangePicker, Stepper } from "@/components/ui";
 import { DateRange } from "react-day-picker";
 
 type ListingFiltersProps = {
@@ -9,7 +9,7 @@ type ListingFiltersProps = {
 };
 
 export default function ListingFilters({ onChange }: ListingFiltersProps) {
-	// const [dates, setDates] = useState<DateRange | undefined>({});
+	const [dates, setDates] = useState<DateRange | undefined>(undefined);
 	const [guests, setGuests] = useState<number | undefined>(1);
 	const [search, setSearch] = useState<string | undefined>("");
 
@@ -25,8 +25,12 @@ export default function ListingFilters({ onChange }: ListingFiltersProps) {
 				value={search}
 				onChange={(e) => setSearch(e.target.value)}
 			/>
-			<DatePickerWithRange />
-			<Stepper label="guest" value={guests} onChange={setGuests}/>
+			<DateRangePicker 
+				value={dates} 
+				onChange={setDates} 
+				placeholder="Select dates"
+			/>
+			<Stepper label="guest" value={guests} onChange={setGuests} />
 			<Button onClick={handleSubmit}>
 				<Search className="h-4 w-4"/>
 			</Button>

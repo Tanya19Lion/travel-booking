@@ -22,7 +22,7 @@ export const withAuth = (...data) =>
 
 		// Returns 403 if token is invalid and auth is enabled
 		if (env.USE_AUTH && !verified) {
-		return [403, { message: 'Unauthorized' }];
+			return [403, { message: 'Unauthorized' }];
 		}
 
 		// Calls the original mock function

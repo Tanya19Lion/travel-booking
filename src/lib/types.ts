@@ -21,7 +21,7 @@ export type Listing = {
     id: number;
     name: string;
     description: string;
-    locationId: number;
+    location: string;
     images: string[];
     price: number;
     maxGuests: number;

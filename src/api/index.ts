@@ -2,7 +2,7 @@ import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
 
-import { env } from '@/lib/env';
+import { env } from '../lib/env';
 
 import {
   generateAccessToken,
@@ -51,12 +51,12 @@ adapter.onGet('/api/listings').reply(
     const listings = getListings(params);
 
     // Maps over listings and adds location
-    const domainListings = listings.map((listing) => {
-      const location = getLocationById(listing.locationId);
-      return { ...listing, location };
-    });
+    // const domainListings = listings.map((listing) => {
+    //   const location = getLocationById(listing.locationId);
+    //   return { ...listing, location };
+    // });
 
-    return [200, domainListings];
+    return [200, listings];
   }),
 );
 
