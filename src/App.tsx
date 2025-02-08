@@ -1,9 +1,9 @@
-import HomePage from "./pages/home-page";
+import { Outlet } from "react-router-dom";
 
 function App() {
 	return (
 		<div className="flex flex-col justify-center items-center">
-			<HomePage />			
+			<Outlet />			
 		</div>
 	)
 }

@@ -170,10 +170,12 @@ const CarouselContent = React.forwardRef<
 })
 CarouselContent.displayName = "CarouselContent"
 
-const CarouselItem = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
+interface CarouselItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  isSelected?: boolean;
+  children: React.ReactNode;
+}
+
+const CarouselItem = React.forwardRef<HTMLDivElement, CarouselItemProps>(({ children, className, isSelected, ...props }, ref) => {
   const { orientation } = useCarousel()
 
   return (
@@ -187,7 +189,16 @@ const CarouselItem = React.forwardRef<
         className
       )}
       {...props}
-    />
+      >
+        <div
+          className={cn(
+            'overflow-hidden rounded-md border-2 border-transparent',
+            isSelected && 'border-primary',
+          )}
+        >
+          {children}
+        </div>
+      </div>
   )
 })
 CarouselItem.displayName = "CarouselItem"

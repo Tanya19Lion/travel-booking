@@ -25,20 +25,21 @@ const adapter = new MockAdapter(api, { delayResponse: 1000 });
 // Gets a single listing
 adapter.onGet(/\/api\/listings\/\d+/).reply(
   withAuth(async (config) => {
-    const id = parseInt(config.url.match(/\/api\/listings\/(\d+)/)[1]);
-
+    const id = Number((config.url).split('/').pop());
+ 
     // Gets listing by id
     const listing = getListingById(id);
     if (!listing) {
       return [404, { message: 'Listing not found' }];
     }
 
-    const location = getLocationById(listing.locationId);
-    if (!location) {
-      return [404, { message: 'Location not found' }];
-    }
+    // const location = getLocationById(listing.locationId);
+    // if (!location) {
+    //   return [404, { message: 'Location not found' }];
+    // }
 
-    return [200, { ...listing, location }];
+    // return [200, { ...listing, location }];
+    return [200, listing];
   }),
 );
 
