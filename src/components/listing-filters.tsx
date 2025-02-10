@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 
 import { Search } from "lucide-react";
 import { Button, Input, DateRangePicker, Stepper } from "@/components/ui";
@@ -8,7 +8,7 @@ type ListingFiltersProps = {
 	onChange: (filters: { dates?: DateRange, guests?: number, search?: string }) => void;
 };
 
-export default function ListingFilters({ onChange }: ListingFiltersProps) {
+function ListingFilters({ onChange }: ListingFiltersProps) {
 	const [dates, setDates] = useState<DateRange | undefined>(undefined);
 	const [guests, setGuests] = useState<number | undefined>(1);
 	const [search, setSearch] = useState<string | undefined>("");
@@ -37,3 +37,5 @@ export default function ListingFilters({ onChange }: ListingFiltersProps) {
 		</div>
 	)
 }
+
+export default memo(ListingFilters);

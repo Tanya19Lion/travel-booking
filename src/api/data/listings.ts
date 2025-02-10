@@ -317,7 +317,6 @@ export const listings: ListingExtended[] = [
 			The studio is located on the 3rd floor of a building with an elevator. It has a living room with a sofa bed, a kitchenette, and a bathroom with a shower and toilet. The studio is equipped with a TV, a DVD player, and a washing machine.`,
 		location: 'Paris',
 		images: [
-			'listing10-1.jpg',
 			'listing10-2.jpg',
 			'listing10-3.jpg',
 			'listing10-4.jpg',

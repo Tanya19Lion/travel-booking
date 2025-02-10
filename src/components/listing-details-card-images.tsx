@@ -13,7 +13,7 @@ export default function ListingCardDetailsImages({ listing }: ListingCardDetails
 	return (
         <>
         <img 
-            className="mb-4 h-[500px] w-full rounded-md object-cover"
+            className="mb-4 h-[650px] w-full rounded-md object-contain"
             src={getImageUrl(listing.images[currentimageIndex])}
             alt={listing.name}
         />
